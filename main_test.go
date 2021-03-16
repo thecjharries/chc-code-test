@@ -108,5 +108,18 @@ func (s *MainSuite) TestPrintAndCollectSalaryWithoutReports(c *C) {
 
 // Note that I'm only counting the number of calls, not verifying the output
 func (s *MainSuite) TestPrintAndCollectSalaryWithReports(c *C) {
-
+	employee := Employee{
+		"Andy",
+		15,
+		[]Employee{
+			{
+				"Dan",
+				5,
+				[]Employee(nil),
+			},
+		},
+	}
+	c.Assert(printCallCount, Equals, 0)
+	c.Assert(employee.PrintAndCollectSalary(0), Equals, 20)
+	c.Assert(printCallCount, Equals, 3)
 }
