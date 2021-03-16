@@ -95,7 +95,7 @@ func (s *MainSuite) TestLoadSampleYaml(c *C) {
 }
 
 // Note that I'm only counting the number of calls, not verifying the output
-func (s *MainSuite) TestPrintAndCollectSalaryWithoutReports(c *C) {
+func (s *MainSuite) TestEmployeePrintAndCollectSalaryWithoutReports(c *C) {
 	employee := Employee{
 		"Jeff",
 		10,
@@ -107,7 +107,7 @@ func (s *MainSuite) TestPrintAndCollectSalaryWithoutReports(c *C) {
 }
 
 // Note that I'm only counting the number of calls, not verifying the output
-func (s *MainSuite) TestPrintAndCollectSalaryWithReports(c *C) {
+func (s *MainSuite) TestEmployeePrintAndCollectSalaryWithReports(c *C) {
 	employee := Employee{
 		"Andy",
 		15,
