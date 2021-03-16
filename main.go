@@ -38,7 +38,7 @@ func (g *EmployeeGraph) Print() {
 	for _, employee := range g.Employees {
 		salary += employee.PrintAndCollectSalary(0)
 	}
-	_, _ = zPrint(fmt.Sprintf("Total Salary: %d", salary))
+	_, _ = zPrint(fmt.Sprintf("Total Salary: %d\n", salary))
 }
 
 // Each employee has a salary and reports (possibly)
@@ -54,10 +54,10 @@ func (e *Employee) PrintAndCollectSalary(depth int) int {
 	_, _ = zPrint(fmt.Sprintf("%s%s\n", strings.Repeat("  ", depth), e.Name))
 	salary := e.Salary
 	if 0 < len(e.Employees) {
-		_, _ = zPrint(fmt.Sprintf("%sEmployees of %s", strings.Repeat("  ", depth), e.Name))
+		_, _ = zPrint(fmt.Sprintf("%sEmployees of %s\n", strings.Repeat("  ", depth + 1), e.Name))
 	}
 	for _, employee := range e.Employees {
-		salary += employee.PrintAndCollectSalary(depth + 1)
+		salary += employee.PrintAndCollectSalary(depth + 2)
 	}
 	return salary
 }
