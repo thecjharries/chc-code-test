@@ -41,7 +41,7 @@ type Employee struct {
 
 // Print the employee name, their employees, and aggregate salaries
 func (e *Employee) PrintAndCollectSalary(depth int) int {
-	_, _ = zPrint(fmt.Sprintf("%s%s\n"), strings.Repeat("  ", depth), e.Name)
+	_, _ = zPrint(fmt.Sprintf("%s%s\n", strings.Repeat("  ", depth), e.Name))
 	salary := e.Salary
 	if 0 < len(e.Employees) {
 		_, _ = zPrint(fmt.Sprintf("%sEmployees of %s", strings.Repeat("  ", depth), e.Name))

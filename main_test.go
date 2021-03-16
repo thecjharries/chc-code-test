@@ -94,10 +94,19 @@ func (s *MainSuite) TestLoadSampleYaml(c *C) {
 	c.Assert(loadSampleYaml(), DeepEquals, output)
 }
 
+// Note that I'm only counting the number of calls, not verifying the output
 func (s *MainSuite) TestPrintAndCollectSalaryWithoutReports(c *C) {
-
+	employee := Employee{
+		"Jeff",
+		10,
+		[]Employee(nil),
+	}
+	c.Assert(printCallCount, Equals, 0)
+	c.Assert(employee.PrintAndCollectSalary(0), Equals, 10)
+	c.Assert(printCallCount, Equals, 1)
 }
 
+// Note that I'm only counting the number of calls, not verifying the output
 func (s *MainSuite) TestPrintAndCollectSalaryWithReports(c *C) {
 
 }
