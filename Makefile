@@ -9,3 +9,7 @@ coverage: test
 # Execute the program
 run:
 	go run main.go
+
+# Get dependencies
+bootstrap:
+	go get ./...
