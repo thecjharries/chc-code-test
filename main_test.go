@@ -124,6 +124,50 @@ func (s *MainSuite) TestEmployeePrintAndCollectSalaryWithReports(c *C) {
 	c.Assert(printCallCount, Equals, 3)
 }
 
+// Note that I'm only counting the number of calls, not verifying the output
 func (s *MainSuite) TestEmployeeGraphPrint(c *C) {
-
+	employeeGraph := EmployeeGraph{
+		Employees: []Employee{
+			{
+				"Jeff",
+				10,
+				[]Employee(nil),
+			},
+			{
+				"Dave",
+				20,
+				[]Employee{
+					{
+						"Andy",
+						15,
+						[]Employee{
+							{
+								"Dan",
+								5,
+								[]Employee(nil),
+							},
+						},
+					},
+					{
+						"Jeff",
+						5,
+						[]Employee(nil),
+					},
+					{
+						"Rick",
+						5,
+						[]Employee(nil),
+					},
+					{
+						"Suzanne",
+						5,
+						[]Employee(nil),
+					},
+				},
+			},
+		},
+	}
+	c.Assert(printCallCount, Equals, 0)
+	employeeGraph.Print()
+	c.Assert(printCallCount, Equals, 10)
 }
