@@ -1,0 +1,17 @@
+employees:
+  Jeff:
+    salary: 10
+  Dave:
+    salary: 20
+    employees:
+      Andy:
+        salary: 15
+        employees:
+          Dan:
+            salary: 5
+      Jason:
+        salary: 5
+      Rick:
+        salary: 5
+      Suzanne:
+        salary: 5
