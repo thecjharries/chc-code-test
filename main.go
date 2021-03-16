@@ -28,14 +28,14 @@ const sampleYamlPath string = "./sample.yaml"
 // This is a graph of employees
 // Each employee is a tree of reports
 type EmployeeGraph struct {
-	Employees []Employee `yaml:",employees"`
+	Employees []Employee `yaml:"employees"`
 }
 
 // Each employee has a salary and reports (possibly)
 type Employee struct {
 	Name      string     `yaml:"name"`
 	Salary    int        `yaml:"salary"`
-	Employees []Employee `yaml:",employees"`
+	Employees []Employee `yaml:"employees"`
 }
 
 // Primary runner
