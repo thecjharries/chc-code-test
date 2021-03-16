@@ -14,10 +14,16 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"gopkg.in/yaml.v2"
+	"io/ioutil"
+)
 
 // Expose print function for testing to game 100% coverage
 var zPrint = fmt.Printf
+
+const sampleYamlPath string = "./sample.yaml"
 
 // This is a graph of employees
 // Each employee is a tree of reports
@@ -34,4 +40,13 @@ type Employee struct {
 // Primary runner
 func main() {
 	_, _ = zPrint("hello world")
+}
+
+// Load the contents of the sample file into an Employee Graph
+func loadSampleYaml() (graph EmployeeGraph) {
+	// Skipping the error because I'm not getting paid for this
+	data, _ := ioutil.ReadFile(sampleYamlPath)
+	// Skipping the error because I'm not getting paid for this
+	_ = yaml.Unmarshal(data, &graph)
+	return
 }

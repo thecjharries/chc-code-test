@@ -48,3 +48,11 @@ func (s *MainSuite) TestMain(c *C) {
 	main()
 	c.Assert(printCallCount, Equals, 1)
 }
+
+func (s *MainSuite) TestLoadSampleYaml(c *C) {
+	output := EmployeeGraph{
+		Employees: []Employee{
+			{},
+		},
+	}
+}
