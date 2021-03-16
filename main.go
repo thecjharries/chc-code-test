@@ -33,6 +33,7 @@ type EmployeeGraph struct {
 
 // Each employee has a salary and reports (possibly)
 type Employee struct {
+	Name      string     `yaml:"name"`
 	Salary    int        `yaml:"salary"`
 	Employees []Employee `yaml:",employees"`
 }

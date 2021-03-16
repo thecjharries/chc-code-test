@@ -1,17 +1,17 @@
 employees:
-  Jeff:
+  - name: Jeff
     salary: 10
-  Dave:
+  - name: Dan
     salary: 20
     employees:
-      Andy:
+      - name: Andy
         salary: 15
         employees:
-          Dan:
+          - name: Dan
             salary: 5
-      Jason:
+      - name: Jeff
         salary: 5
-      Rick:
+      - name: Rick
         salary: 5
-      Suzanne:
+      - name: Suzanne
         salary: 5
