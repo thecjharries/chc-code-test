@@ -19,6 +19,13 @@ import "fmt"
 // Expose print function for testing to game 100% coverage
 var zPrint = fmt.Printf
 
+// This is a graph of employees
+// Each employee is a tree of reports
+type EmployeeGraph struct {
+	Employees []Employee `yaml:",employees"`
+}
+
+// Each employee has a salary and reports (possibly)
 type Employee struct {
 	Salary    int        `yaml:"salary"`
 	Employees []Employee `yaml:",employees"`

@@ -27,6 +27,7 @@ I populated the repo with copypasta from my other work. It's common for me to st
 
 * Ignoring git flow because I'm being lazy and there's no need at the start.
 * `Employee.Salary` is going to be an `int` because I'm lazy and the example was a whole number. Changing the type doesn't really matter for what I'm doing.
+* Reports are trees not cyclic graphs. eg if Alice reports to Bob and Bob reports to Charlie, Charlie cannot report to Alice.
 
 
 ## Post-Mortem
