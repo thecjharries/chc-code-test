@@ -123,3 +123,7 @@ func (s *MainSuite) TestPrintAndCollectSalaryWithReports(c *C) {
 	c.Assert(employee.PrintAndCollectSalary(0), Equals, 20)
 	c.Assert(printCallCount, Equals, 3)
 }
+
+func (s *MainSuite) TestEmployeeGraphPrint(c *C) {
+
+}

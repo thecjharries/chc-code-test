@@ -32,6 +32,15 @@ type EmployeeGraph struct {
 	Employees []Employee `yaml:"employees"`
 }
 
+// Walk and print the employee graph while collecting total salary
+func (g *EmployeeGraph) Print() {
+	salary := 0
+	for _, employee := range g.Employees {
+		salary += employee.PrintAndCollectSalary(0)
+	}
+	_, _ = zPrint(fmt.Sprintf("Total Salary: %d", salary))
+}
+
 // Each employee has a salary and reports (possibly)
 type Employee struct {
 	Name      string     `yaml:"name"`
@@ -40,6 +49,7 @@ type Employee struct {
 }
 
 // Print the employee name, their employees, and aggregate salaries
+// Note that I'm not forcing depth to be >= 0; I'm being lazy
 func (e *Employee) PrintAndCollectSalary(depth int) int {
 	_, _ = zPrint(fmt.Sprintf("%s%s\n", strings.Repeat("  ", depth), e.Name))
 	salary := e.Salary
