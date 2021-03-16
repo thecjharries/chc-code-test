@@ -6,7 +6,7 @@
 
 ## Overview
 
-This contains my short stab at solving the prompt below.
+This contains my short stab at solving the prompt below. See Usage for running the code; check out [my notes](./notes.md) for some analysis.
 
 ## Usage
 
