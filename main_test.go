@@ -52,7 +52,44 @@ func (s *MainSuite) TestMain(c *C) {
 func (s *MainSuite) TestLoadSampleYaml(c *C) {
 	output := EmployeeGraph{
 		Employees: []Employee{
-			{},
+			{
+				"Jeff",
+				10,
+				[]Employee(nil),
+			},
+			{
+				"Dave",
+				20,
+				[]Employee{
+					{
+						"Andy",
+						15,
+						[]Employee{
+							{
+								"Dan",
+								5,
+								[]Employee(nil),
+							},
+						},
+					},
+					{
+						"Jeff",
+						5,
+						[]Employee(nil),
+					},
+					{
+						"Rick",
+						5,
+						[]Employee(nil),
+					},
+					{
+						"Suzanne",
+						5,
+						[]Employee(nil),
+					},
+				},
+			},
 		},
 	}
+	c.Assert(loadSampleYaml(), DeepEquals, output)
 }

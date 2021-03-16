@@ -1,7 +1,7 @@
 employees:
   - name: Jeff
     salary: 10
-  - name: Dan
+  - name: Dave
     salary: 20
     employees:
       - name: Andy
