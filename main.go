@@ -64,7 +64,8 @@ func (e *Employee) PrintAndCollectSalary(depth int) int {
 
 // Primary runner
 func main() {
-	_, _ = zPrint("hello world")
+	sampleEmployeeGraph := loadSampleYaml()
+	sampleEmployeeGraph.Print()
 }
 
 // Load the contents of the sample file into an Employee Graph
