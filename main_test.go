@@ -93,3 +93,11 @@ func (s *MainSuite) TestLoadSampleYaml(c *C) {
 	}
 	c.Assert(loadSampleYaml(), DeepEquals, output)
 }
+
+func (s *MainSuite) TestPrintAndCollectSalaryWithoutReports(c *C) {
+
+}
+
+func (s *MainSuite) TestPrintAndCollectSalaryWithReports(c *C) {
+
+}

@@ -18,6 +18,7 @@ import (
 	"fmt"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
+	"strings"
 )
 
 // Expose print function for testing to game 100% coverage
@@ -36,6 +37,19 @@ type Employee struct {
 	Name      string     `yaml:"name"`
 	Salary    int        `yaml:"salary"`
 	Employees []Employee `yaml:"employees"`
+}
+
+// Print the employee name, their employees, and aggregate salaries
+func (e *Employee) PrintAndCollectSalary(depth int) int {
+	_, _ = zPrint(fmt.Sprintf("%s%s\n"), strings.Repeat("  ", depth), e.Name)
+	salary := e.Salary
+	if 0 < len(e.Employees) {
+		_, _ = zPrint(fmt.Sprintf("%sEmployees of %s", strings.Repeat("  ", depth), e.Name))
+	}
+	for _, employee := range e.Employees {
+		salary += employee.PrintAndCollectSalary(depth + 1)
+	}
+	return salary
 }
 
 // Primary runner
