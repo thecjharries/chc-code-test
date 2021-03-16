@@ -32,5 +32,6 @@ I populated the repo with copypasta from my other work. It's common for me to st
 ### General Notes
 
 * Godoc is unlike the typical Javadoc paradigm other languages (including Python) employ. I'm not super comfortable with it because I haven't compiled and used its output yet.
+* I'm writing this in GoLand which has a lot of syntactic sugar and QoL functionality. I could write this in and for `vim`. Or I could use an IDE I pay for to make the process very simple. I'm not getting paid for this so I'm not making it hard on myself.
 
 ## Post-Mortem
