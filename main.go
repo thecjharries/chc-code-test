@@ -19,6 +19,11 @@ import "fmt"
 // Expose print function for testing to game 100% coverage
 var zPrint = fmt.Printf
 
+type Employee struct {
+	Salary    int        `yaml:"salary"`
+	Employees []Employee `yaml:",employees"`
+}
+
 // Primary runner
 func main() {
 	_, _ = zPrint("hello world")
