@@ -8,6 +8,24 @@
 
 This contains my short stab at solving the prompt below.
 
+## Usage
+
+This should work in theory. I'm too lazy to test the full initialization process from scratch.
+
+```shell
+# clone the repo
+git clone git@github.com:thecjharries/chc-code-test.git
+cd chc-code-test
+# ensures you have the deps
+make bootstrap
+# runs the code (read it to find out what that does)
+make run
+# shows test coverage (only slightly gamed)
+make coverage
+```
+
+You'll want it in your `GOPATH` or you should know how to set up things so you don't have to be in your `GOPATH`.
+
 ## Prompt
 
 ### Background
