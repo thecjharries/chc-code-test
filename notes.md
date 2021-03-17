@@ -52,4 +52,4 @@ I populated the repo with copypasta from my other work. It's common for me to st
 
 I totally forgot about sorting alphabetically. I don't feel like implementing [a custom `sort` setup](https://yourbasic.org/golang/how-to-sort-in-go/#sort-custom-data-structures) so I'm going to skip that. If I were going to, I'd probably have a recursive `Sort` on `Employee` that did some sort of alphabetical comparison on the name.
 
-If I had used a `map[string]Employee` where the key was the `Employee` name, I could have sorted the `map` keys and printed in order. ¯\_(ツ)_/¯
+If I had used a `map[string]Employee` where the key was the `Employee` name, I could have sorted the `map` keys and printed in order. ¯\\\_(ツ)\_/¯
