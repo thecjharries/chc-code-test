@@ -8,6 +8,8 @@
 
 This contains my short stab at solving the prompt below. See Usage for running the code; check out [my notes](./notes.md) for some analysis.
 
+When you see `lazy` in the comments or docs, I'm referring to things I don't want to do in my free time. I called them out to highlight what I would normally do were I getting paid for it. Were this exercise in an interview format, I'd do the same thing. Call out what I'm not doing in the interest of time.
+
 ## Usage
 
 This should work in theory. I'm too lazy to test the full initialization process from scratch.
