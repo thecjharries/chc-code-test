@@ -10,7 +10,7 @@
 
 #### Python vs Go
 
-I could be done quickly if I chose Python. It's a nested dict. I want to learn something new from this experience. Also Go gives me type-checking. If I built this in Python, I'd also have to write a JSON schema and validate the YAML. I've done that; it's easy but tedious. Not interesing.
+I could be done quickly if I chose Python. It's a nested dict. I want to learn something new from this experience. Also Go gives me type-checking. If I built this in Python, I'd also have to write a JSON schema to validate the YAML. I've done that; it's easy but tedious. Not interesing.
 
 #### Primary Goals
 
