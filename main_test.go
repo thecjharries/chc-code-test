@@ -46,7 +46,7 @@ func (s *MainSuite) TearDownTest(c *C) {
 func (s *MainSuite) TestMain(c *C) {
 	c.Assert(printCallCount, Equals, 0)
 	main()
-	c.Assert(printCallCount, Equals, 1)
+	c.Assert(printCallCount, Equals, 10)
 }
 
 func (s *MainSuite) TestLoadSampleYaml(c *C) {
