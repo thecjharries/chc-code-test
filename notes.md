@@ -46,3 +46,9 @@ I populated the repo with copypasta from my other work. It's common for me to st
 * I didn't test any of the output. Normally I separate strings from printing, eg I'd have a `String` method and a `Print` method so I can verify `String` is proper and just ensure `Print` is doing the right system calls. I was too lazy and tbh I forgot about `String` until right now, writing my post-mortem.
 * This was a pleasant and easy exercise to do.
 * I don't do a lot of documentation inside of functions. There's pros and cons to it. I try to keep my functions small enough that you don't need to document internally. If you're doing some complicated logic, it makes sense to break it down. I'm doing Data Structures 101 here so it makes no sense.
+
+### Missing Extra Credit
+
+I totally forgot about sorting alphabetically. I don't feel like implementing [a custom `sort` setup](https://yourbasic.org/golang/how-to-sort-in-go/#sort-custom-data-structures) so I'm going to skip that. If I were going to, I'd probably have a recursive `Sort` on `Employee` that did some sort of alphabetical comparison on the name.
+
+If I had used a `map[string]Employee` where the key was the `Employee` name, I could have sorted the `map` keys and printed in order. ¯\_(ツ)_/¯
