@@ -10,7 +10,7 @@
 
 #### Python vs Go
 
-I could be done quickly if I chose Python. It's a nested dict. I want to learn something new from this experience.
+I could be done quickly if I chose Python. It's a nested dict. I want to learn something new from this experience. Also Go gives me type-checking. If I built this in Python, I'd also have to write a JSON schema and validate the YAML. I've done that, it's easy but tedious. Not interesing.
 
 #### Primary Goals
 
@@ -46,6 +46,7 @@ I populated the repo with copypasta from my other work. It's common for me to st
 * I didn't test any of the output. Normally I separate strings from printing, eg I'd have a `String` method and a `Print` method so I can verify `String` is proper and just ensure `Print` is doing the right system calls. I was too lazy and tbh I forgot about `String` until right now, writing my post-mortem.
 * This was a pleasant and easy exercise to do.
 * I don't do a lot of documentation inside of functions. There's pros and cons to it. I try to keep my functions small enough that you don't need to document internally. If you're doing some complicated logic, it makes sense to break it down. I'm doing Data Structures 101 here so it makes no sense.
+* If I was supposed to build out the graph in Go, I did not do that because that's really annoying. Building in YAML and loading it in is way easier (which is true of almost any data structure with some complexity, imo). I built one in my tests and copied it around for other tests.
 
 ### Missing Extra Credit
 
